@@ -1,6 +1,6 @@
 package test.ja_va;
 
-public class test05 {
+public class test04 {
 
     public static void main(String[] args) {
 
@@ -9,7 +9,7 @@ public class test05 {
         boolean result = true;
 
         while (result) {
-
+            //
             if (firstDice + secondDice != 5) {
                 // 주사위 돌리기
                 firstDice = (int) (Math.random() * 6) + 1;

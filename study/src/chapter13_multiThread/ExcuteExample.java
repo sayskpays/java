@@ -1,5 +1,7 @@
 package chapter13_multiThread;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -18,7 +20,7 @@ public class ExcuteExample {
                     ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) executorService;
                     int poolSize = threadPoolExecutor.getPoolSize();
                     String threadName = Thread.currentThread().getName();
-
+                    
                     System.out.println("총 스레드 개수 : " + poolSize );
                     System.out.println("작업 스레드 이름 :" + threadName);
 
@@ -28,8 +30,8 @@ public class ExcuteExample {
             };
 
             //작업 처리 요청
-            executorService.execute(runnable);
-            //executorService.submit(runnable);
+            //executorService.execute(runnable);
+            executorService.submit(runnable);
 
             try {
                 Thread.sleep(10);
@@ -40,6 +42,14 @@ public class ExcuteExample {
 
         //스레드 풀 종료
         executorService.shutdown();
+
+
+
     }
+
     
+   
+    
+
+
 }

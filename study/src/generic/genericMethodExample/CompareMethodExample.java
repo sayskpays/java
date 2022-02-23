@@ -11,7 +11,7 @@ public class CompareMethodExample {
         }else{
             System.out.println("논리적으로 동등하지 않은 객체 입니다.");
         }
-
+        
         Pair<String , String>p3 = new Pair<String,String>("h","apple");
         Pair<String , String>p4 = new Pair<String,String>("a","apple");
         // 구체적인 타입을 추정

@@ -36,12 +36,13 @@ tweet_string = "Blash" * 50
 
 diff = tweet_limit - len(tweet_string)
 
+
 if diff >= 0:
     print()
 else:
     print()
 
-# 바다 코끼리 연산자 사용
+# 바다 코끼리 연산자 사용   :=
 # 따로 diff 변수를 선언해 주지 않고 한 줄로 처리
 tweet_limit = 280
 tweet_string = "Blash" * 50

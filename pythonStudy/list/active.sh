@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+# ln 하드링크 active에 hawk, admin 빼놓는 스크립트 생성 !!!
+
 CheckUser=`whoami`
 
 if [ ${CheckUser} != "root" ]; then

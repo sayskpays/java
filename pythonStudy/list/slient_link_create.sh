@@ -18,22 +18,22 @@ DbDriversPath='tibco/tibco_install/1.package/06.TIB_dbdrivers_2.0.6/'
 if [ ${CheckUser} != "root" ]; then
   if [ ! -f /home/${CheckUser}/tibco/tibco_install/1.package/01.TIB_rv_8.4.4/silent_install.sh  ]; then
 
-  ln -s silent_install.sh /home/${CheckUser}/${RvPath}
-  ln -s silent_install.sh /home/${CheckUser}/${EmsPath}
-  ln -s silent_install.sh /home/${CheckUser}/${TraPath}
-  ln -s silent_install.sh /home/${CheckUser}/${BwPath}
-  ln -s silent_install.sh /home/${CheckUser}/${AdminPath}
-  ln -s silent_install.sh /home/${CheckUser}/${DbDriversPath}
+    ln -s silent_install.sh /home/${CheckUser}/${RvPath}
+    ln -s silent_install.sh /home/${CheckUser}/${EmsPath}
+    ln -s silent_install.sh /home/${CheckUser}/${TraPath}
+    ln -s silent_install.sh /home/${CheckUser}/${BwPath}
+    ln -s silent_install.sh /home/${CheckUser}/${AdminPath}
+    ln -s silent_install.sh /home/${CheckUser}/${DbDriversPath}
 
   sleep 2.0
 
-  # shellcheck disable=SC2225
-  cp /home/${CheckUser}/${RvPath}/TIBCOUniversalInstaller-rv.silent 01.TIB_rv_8.4.4.silent
-  cp /home/${CheckUser}/${EmsPath}/TIBCOUniversalInstaller-ems.silent 02.TIB_ems_8.4.0.silent
-  cp /home/${CheckUser}/${TraPath}/TIBCOUniversalInstaller_TRA_5.11.0.silent 03.TIB_TRA_5.11.0.silent
-  cp /home/${CheckUser}/${BwPath}/TIBCOUniversalInstaller-BW_5.14.0.silent 04.TIB_BW_5.14.0.silent
-  cp /home/${CheckUser}/${AdminPath}/TIBCOUniversalInstaller_TIBCOAdmin_5.11.0.silent 05.TIB_TIBCOAdmin_5.11.0.silent
-  cp /home/${CheckUser}/${DbDriversPath}/TIBCOUniversalInstaller-dbdrivers_2.0.6.silent 06.TIB_dbdrivers_2.0.6.silent
+    # shellcheck disable=SC2225
+    cp /home/${CheckUser}/${RvPath}/TIBCOUniversalInstaller-rv.silent 01.TIB_rv_8.4.4.silent
+    cp /home/${CheckUser}/${EmsPath}/TIBCOUniversalInstaller-ems.silent 02.TIB_ems_8.4.0.silent
+    cp /home/${CheckUser}/${TraPath}/TIBCOUniversalInstaller_TRA_5.11.0.silent 03.TIB_TRA_5.11.0.silent
+    cp /home/${CheckUser}/${BwPath}/TIBCOUniversalInstaller-BW_5.14.0.silent 04.TIB_BW_5.14.0.silent
+    cp /home/${CheckUser}/${AdminPath}/TIBCOUniversalInstaller_TIBCOAdmin_5.11.0.silent 05.TIB_TIBCOAdmin_5.11.0.silent
+    cp /home/${CheckUser}/${DbDriversPath}/TIBCOUniversalInstaller-dbdrivers_2.0.6.silent 06.TIB_dbdrivers_2.0.6.silent
   fi
    echo "silent file exsist"
 fi

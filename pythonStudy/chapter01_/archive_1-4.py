@@ -22,4 +22,3 @@ try:
     webbrowser.open(old_site)
 except:
     print("Error exist")
-

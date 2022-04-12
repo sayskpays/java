@@ -3,7 +3,6 @@
 CheckUser=`whoami`
 
 unzip /home/${CheckUser}/bw_install* -d /home/tibco/tibco_install
-sleep 2.0
 
 # If you need to input other TIBCO Version Please Change Version Using Ctrl + h
 # Ex) 8.4.4 -> 9.0.0
@@ -28,17 +27,17 @@ if [ ${CheckUser} != "root" ]; then
             echo "Directory Exsist OK !!!!"
 
             unzip /home/${CheckUser}/${CheckRV} -d /home/${CheckUser}/${RvPath}
-            sleep 2.0
+
             unzip /home/${CheckUser}/${CheckEMS} -d /home/${CheckUser}/${EmsPath}
-            sleep 2.0
+
             unzip /home/${CheckUser}/${CheckTRA} -d /home/${CheckUser}/${TraPath}
-            sleep 2.0
+
             unzip /home/${CheckUser}/${CheckBW} -d /home/${CheckUser}/${BwPath}
-            sleep 2.0
+
             unzip /home/${CheckUser}/${CheckAdmin} -d /home/${CheckUser}/${AdminPath}
-            sleep 2.0
+
             unzip /home/${CheckUser}/${CheckDB} -d /home/${CheckUser}/${DbDriversPath}
-            sleep 5.0
+
 
             # 84-64 bin copy
             cp /home/${CheckUser}/${EmsPath}/TIBCOUniversalInstaller-lnx* /home/${CheckUser}/${RvPath}
@@ -50,6 +49,7 @@ if [ ${CheckUser} != "root" ]; then
             cp /home/${CheckUser}${AdminPath}/*Admin*.silent /home/${CheckUser}/${AdminPath}/admin_install.silent
             cp /home/${CheckUser}${DbDriversPath}/*dbdrivers*.silent /home/${CheckUser}/${DbDriversPath}/dbdrivers_install.silent
 
+            echo "Successful Unzip"
             exit
         fi
             echo "package folder Not Exsist"

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-
-CheckUser=`whoami`
+CheckUser=$(whoami)
 
 # If you need to input other TIBCO Version Please Change Version Using Ctrl + h
 # Ex) 8.4.4 -> 9.0.0
@@ -13,24 +12,24 @@ AdminPath='tibco/tibco_install/1.package/05.TIB_TIBCOAdmin_5.11.0'
 DbDriversPath='tibco/tibco_install/1.package/06.TIB_dbdrivers_2.0.6'
 
 if [ ${CheckUser} != "root" ]; then
-		echo "${CheckUser} Directory Create..."
+  echo "${CheckUser} Directory Create..."
 
-	if [ -d /home/hong/tibco/tibco_install/1.package/ ]; then
-		echo "Directory Exsist !!!!"
-	fi
-		 echo "${CheckUser} Successful Create Directory"
-    mkdir /home/${CheckUser}/tibco
-    mkdir /home/${CheckUser}/tibco/tibco_install_files/
-    mkdir /home/${CheckUser}/tibco/tibco_install
-    mkdir /home/${CheckUser}/tibco/tibco_install/1.package
-    mkdir /home/${CheckUser}/tibco/tibco_install/2.hotfix
+  if [ -d /home/hong/tibco/tibco_install/1.package/ ]; then
+    echo "Directory Exsist !!!!"
+  fi
+  echo "${CheckUser} Successful Create Directory"
+  mkdir /home/${CheckUser}/tibco
+  mkdir /home/${CheckUser}/tibco/tibco_install_files/
+  mkdir /home/${CheckUser}/tibco/tibco_install
+  mkdir /home/${CheckUser}/tibco/tibco_install/1.package
+  mkdir /home/${CheckUser}/tibco/tibco_install/2.hotfix
 
-    mkdir /home/${CheckUser}/${RvPath}
-    mkdir /home/${CheckUser}/${EmsPath}
-    mkdir /home/${CheckUser}/${TraPath}
-    mkdir /home/${CheckUser}/${BwPath}
-    mkdir /home/${CheckUser}/${AdminPath}
-    mkdir /home/${CheckUser}/${DbDriversPath}
-    exit
+  mkdir /home/${CheckUser}/${RvPath}
+  mkdir /home/${CheckUser}/${EmsPath}
+  mkdir /home/${CheckUser}/${TraPath}
+  mkdir /home/${CheckUser}/${BwPath}
+  mkdir /home/${CheckUser}/${AdminPath}
+  mkdir /home/${CheckUser}/${DbDriversPath}
+  exit
 fi
 echo "Please Change root User"

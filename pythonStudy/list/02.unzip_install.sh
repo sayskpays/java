@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# You must create User Name with tibco !!!!!
+
 CheckUser=`whoami`
 
 unzip /home/${CheckUser}/bw_install* -d /home/tibco/tibco_install

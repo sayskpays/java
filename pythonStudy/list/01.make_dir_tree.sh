@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CheckUser=`whoami`
+CheckUser=$(whoami)
 
 # You must create User Name with tibco !!!!!
 

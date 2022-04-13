@@ -2,7 +2,7 @@
 
 # You must create User Name with tibco !!!!!
 
-CheckUser=`whoami`
+CheckUser=$(whoami)
 
 # If you need to input other TIBCO Version Please Change Version Using Ctrl + h
 # Ex) 8.4.4 -> 9.0.0

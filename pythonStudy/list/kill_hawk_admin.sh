@@ -2,7 +2,7 @@
 
 CheckUser=$(whoami)
 
-if [ ${CheckUser} != "hong" ]; then
+if [ ${CheckUser} != "root" ]; then
   echo "${CheckUser}"
 
   kill -9 $(ps -ef | grep hawk | awk '{print $2}')

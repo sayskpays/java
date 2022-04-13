@@ -7,7 +7,7 @@ CheckUser=$(whoami)
 
 dateTime=date +"%y%m%d"
 
-if [ ${CheckUser} != "hong" ]; then
+if [ ${CheckUser} != "root" ]; then
 
   # CreateDomain , DeleteDomain file Copy
   cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/CreateDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/CreateDomain_${dateTime}

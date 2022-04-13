@@ -2,7 +2,7 @@
 
 CheckUser=$(whoami)
 
-if [ ${CheckUser} != "hong" ]; then
+if [ ${CheckUser} != "root" ]; then
   echo "${CheckUser}"
 
   if [ -d /home/${CheckUser}/tibco/tra/domain/ ]; then

@@ -4,20 +4,21 @@
   # Ex) 8.4.4 -> 9.0.0
 
 CheckUser=$(whoami)
-
-dateTime=date +"%y%m%d"
+CheckHostName=`hostname`
+EmsPort='8111'
 
 if [ ${CheckUser} != "root" ]; then
 
   # CreateDomain , DeleteDomain file Copy
-  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/CreateDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/CreateDomain_${dateTime}
-  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/DeleteDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/DeleteDomain_${dateTime}
+  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/CreateDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/CreateDomain_${CheckHostName}
+  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/DeleteDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/DeleteDomain_${CheckHostName}
 
   # tibemsd.conf file copy
-  cp /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd.conf /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd_${EmsPath}.conf
+  cp /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd.conf /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd_${EmsPort}.conf
   # tibemsd.sh file copy
-  cp /home/${CheckUser}/tibco/ems/8.4/bin/tibemsd.sh /home/${CheckUser}/tibco/ems/8.4/bin/tibemsd_${EmsPath}.sh
+  cp /home/${CheckUser}/tibco/ems/8.4/bin/tibemsd.sh /home/${CheckUser}/tibco/ems/8.4/bin/tibemsd_${EmsPort}.sh
 
+  echo "Successful config file copy !!! "
   exit
 fi
 echo "Please Change root User"

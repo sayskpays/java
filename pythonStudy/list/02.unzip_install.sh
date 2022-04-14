@@ -4,7 +4,8 @@
 
 CheckUser=$(whoami)
 
-unzip /home/${CheckUser}/bw_install* -d /home/tibco/tibco_install
+# must be bw install file name *bw*.zip !!!!!!!!!!!!!!!!!!!!
+unzip /home/${CheckUser}/*bw*.zip -d /home/tibco/tibco_install
 
 # If you need to input other TIBCO Version Please Change Version Using Ctrl + h
 # Ex) 8.4.4 -> 9.0.0

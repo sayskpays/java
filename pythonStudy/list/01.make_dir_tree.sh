@@ -17,7 +17,7 @@ DbDriversPath=tibco_install/1.package/06.TIB_dbdrivers_2.0.6
 if [ ${CheckUser} != "root" ]; then
   echo "${CheckUser} Directory Create..."
 
-  if [ -d /home/hong/tibco/tibco_install/1.package/ ]; then
+  if [ -d /home/${CheckUser}/tibco/tibco_install/1.package/ ]; then
     echo "Directory Exsist !!!!"
   fi
   echo "${CheckUser} Successful Create Directory"

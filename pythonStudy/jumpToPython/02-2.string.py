@@ -64,6 +64,23 @@ print("I ate %d apples. so I was sick for %s days" % (number, day))
 
 # 포맷 코드 숫자와 함께 사용하기
 
+"I eat {0} apples".format(3)
+# == I eat 3 apples
+
+# format 이름으로 값 넣기
+
+"I ate {number} apples. so I was sick for {day} days".format(number=10, day=3)
+
+
+# format 문자열을 왼쪽으로 정렬 후 총 자리수를 10으로 맞추기 > 기호 사용하면 오른쪽 정렬 가능 ^는 가운데 정렬
+"{0:<10}".format("hi")
+# 'hi        '
+
+# format 공백 채우기
+
+"{0:=^10}".format("hi")
+# '====hi===='
+
 
 
 

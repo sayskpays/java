@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-
-
 CheckUser=`whoami`
 
 # If you need to input other TIBCO Version Please Change Version Using Ctrl + h

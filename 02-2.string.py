@@ -82,6 +82,18 @@ print("I ate %d apples. so I was sick for %s days" % (number, day))
 # '====hi===='
 
 
+# 문자열 내의 문자 갯수 세기
+
+a03 = "hobby"
+a03.count('b')
+
+# 문자열 내의 문자 위치 알려주기
+
+a04 = "Python is the best choice"
+a04.find('b')
+
+
+
 
 
 

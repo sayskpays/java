@@ -4,14 +4,14 @@
   # Ex) 8.4.4 -> 9.0.0
 
 CheckUser=$(whoami)
-CheckHostName=`hostname`
+CheckServerName='eai_domain'
 EmsPort='8111'
 
 if [ ${CheckUser} != "root" ]; then
 
   # CreateDomain , DeleteDomain file Copy
-  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/CreateDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/CreateDomain_${CheckHostName}
-  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/DeleteDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/DeleteDomain_${CheckHostName}
+  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/CreateDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/CreateDomain_${CheckServerName}
+  cp /home/${CheckUser}/tibco/tra/5.11/template/domainutility/cmdline/DeleteDomain.xml /home/${CheckUser}/tibco/tra/5.11/bin/DeleteDomain_${CheckServerName}
 
   # tibemsd.conf file copy
   cp /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd.conf /home/${CheckUser}/tibco/tibco/cfgmgmt/ems/data/tibemsd_${EmsPort}.conf

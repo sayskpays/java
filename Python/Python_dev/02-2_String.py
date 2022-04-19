@@ -92,6 +92,42 @@ a03.count('b')
 a04 = "Python is the best choice"
 a04.find('b')
 
+# 소문자를 대문자로 바꾸기 
+
+a05 = "hi"
+a05.upper()
+
+# 대문자를 소문자로 바꾸기
+
+a05.lower()
+
+# 왼쪽 공백 지우기
+
+a06 = "   hi "
+a06.lstrip()
+
+# 양쪽 공백 지우기
+
+a06.strip()
+
+# 문자열 바꾸기 replace
+
+a07 = "Life is too short"
+a07.replace("is", "Your leg")
+
+# 문자열 나누기 split
+
+a08 = "Life is too short"
+a08.split()
+# 'Life' , 'is' , 'too' , 'short' 
+
+a09 = "a:b:c:d"
+a09.split(':')
+# ['a', 'b', 'c', 'd']
+
+
+
+
 
 
 

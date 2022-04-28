@@ -53,6 +53,31 @@ b1.values() # >> dict_values(['pey', '0100000000','1118'])
 
 b1.items() # dict_items([('name','pey'),('phone','01000000'),('birth','1118')])
 
+# 4. Key : Value 쌍 모두 지우기 (clear)
+
+b1.clear()
+
+b1 # >> {}
+
+# 5. Key로 Value 얻기 (get)
+
+c1 = {'name':'pey','phone':'010','birth':'1118'}
+c1.get('name') # >> pey
+
+# * c1['name']  , c1.get('name') 의 차이점 : 전자는 없을 경우 오류 발생
+# 후자는 None 리턴
+
+# 5-1 딕셔너리 안에 찾으려는 Key 값이 없을 경우 디폴트 값 리턴
+c1.get('none', 'default') # >> 'default'
+
+
+# 6. 해당 Key가 딕셔너리 안에 있는지 조사하기 (in)
+
+d1 = {'name':'pey','phone':'010','birth':'1118'}
+'name' in d1 # >> True
+'email' in d1 # >> False
+
+
 
 
 

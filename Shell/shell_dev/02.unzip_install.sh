@@ -12,10 +12,10 @@ unzip /home/${CheckUser}/*bw*.zip -d /home/tibco/tibco_install
 RvPath=/tibco_install/1.package/01.TIB_rv_8.4.4/
 EmsPath=/tibco_install/1.package/02.TIB_ems_8.4.0/
 TraPath=/tibco_install/1.package/03.TIB_TRA_5.11.0/
-BwPath=/tibco_install/1.package/04.TIB_BW_5.14.0/``
+BwPath=/tibco_install/1.package/04.TIB_BW_5.14.0/
 AdminPath=/tibco_install/1.package/05.TIB_TIBCOAdmin_5.11.0/
 DbDriversPath=/tibco_install/1.package/06.TIB_dbdrivers_2.0.6/
-``
+
 CheckRV=$(find * -name 'TIB_rv*' -type f)
 CheckEMS=$(find * -name 'TIB_ems*' -type f)
 CheckTRA=$(find * -name 'TIB_TRA*' -type f)

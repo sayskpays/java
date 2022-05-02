@@ -92,6 +92,12 @@ a03.count('b')
 a04 = "Python is the best choice"
 a04.find('b')
 
+
+# 문자열 삽입 (join)
+
+",".join("abcd") # >> 'a,b,c,d'
+
+
 # 소문자를 대문자로 바꾸기 
 
 a05 = "hi"

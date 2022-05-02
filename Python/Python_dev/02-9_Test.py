@@ -42,16 +42,18 @@ st_replace = st.replace(":","#")
 
 print(st_replace)
 
-# [1,3,5,4,2] 리스트를 [5,4,3,2,1] 로 만들어보자
+# Q6 . [1,3,5,4,2] 리스트를 [5,4,3,2,1] 로 만들어보자
 
 list_test = [1,3,5,4,2]
+list_test.sort()
+list_test.reverse()
 
-test01 = list(list_test.sort())
-#complete_list = test01.reverse()
+print(list_test)
 
-for a in test01:
-    print(a)
-    
+# Q7. ['Life', 'is', 'too', 'short'] 리스트를 
+# Life is too short 문자열로 만들어 출력해 보자.
+
+q7_list = ['Life', 'is', 'too', 'short']
 
 
     

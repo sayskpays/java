@@ -20,4 +20,11 @@ c = [1,2,3,4]
 while c:
     print(c.pop()) # >> 4 3 2 1  
 
-# 
+
+
+# Bool 연산
+
+bool('python') # >> Ture
+bool('') # >> False
+
+

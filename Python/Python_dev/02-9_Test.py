@@ -1,6 +1,9 @@
 # 홍길동 씨의 과목별 점수는 다음과 같다. 홍길동 씨의 평균 점수를 구해 보자.
 # 국어 80 영어 75 수학 55
 
+from ntpath import join
+
+
 korean = 80
 english = 75
 math = 55
@@ -54,6 +57,10 @@ print(list_test)
 # Life is too short 문자열로 만들어 출력해 보자.
 
 q7_list = ['Life', 'is', 'too', 'short']
+q7 = " ".join(q7_list);
+print(q7)
+
+
 
 
     

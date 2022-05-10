@@ -20,22 +20,22 @@ if [ ! -f /home/${CheckUser}/${RvPath}/rv_install.silent ]; then
 fi
 
 if [ "${CheckUser}" != "root" ]; then
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${RvPath}/rv_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${RvPath}/rv_install.silent
 
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${EmsPath}/ems_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${EmsPath}/ems_install.silent
   sed -i 's\user\tibco\' /home/${CheckUser}/${EmsPath}/ems_install.silent
 
   # If change User name , /home/tibco/ -> /home/{Changed User Name}/ Need to Change.
-  sed -i 's\"emsConfigDir"><\"emsConfigDir">/home/tibco/tibco/ems/8.4<\' /home/${CheckUser}/${TraPath}/tra_install.silent
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${TraPath}/tra_install.silent
+  sed -i 's\"emsConfigDir"><\"emsConfigDir">/home/'"$CheckUser"'/tibco/ems/8.4<\' /home/${CheckUser}/${TraPath}/tra_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${TraPath}/tra_install.silent
   sed -i 's\user\tibco\' /home/${CheckUser}/${TraPath}/tra_install.silent
 
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${BwPath}/bw_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${BwPath}/bw_install.silent
 
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${AdminPath}/admin_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${AdminPath}/admin_install.silent
 
-  sed -i 's\opt/tibco\home/tibco/tibco\' /home/${CheckUser}/${DbDriversPath}/dbdrivers_install.silent
-  sed -i 's%c:\\%/home/tibco/%' /home/tibco//tibco_install/1.package/06.TIB_dbdrivers_2.0.6//dbdrivers_install.silent
+  sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${DbDriversPath}/dbdrivers_install.silent
+  sed -i 's%c:\\%/home/'"$CheckUser"'/%' /home/${CheckUser}/${DbDriversPath}/dbdrivers_install.silent
 
   echo "Successful change"
   exit

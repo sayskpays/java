@@ -107,6 +107,20 @@ def var_test(a):
 
 a = var_test(a)
 
+# lambda
+"""
+함수를 생성할 때 사용하는 예약어
+lambda 매개변수1,매개변수2,... : 매개변수를 이용한 표현식
+"""
+add = lambda a , b: a+b
+result = add(3,4)
+
+# 위의 예제 def로 변경
+
+def add(a,b):
+    return a+b
+result = add(3,4)
+
 
 
 

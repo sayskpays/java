@@ -23,12 +23,12 @@ if [ "${CheckUser}" != "root" ]; then
   sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${RvPath}/rv_install.silent
 
   sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${EmsPath}/ems_install.silent
-  sed -i 's\user\tibco\' /home/${CheckUser}/${EmsPath}/ems_install.silent
+  sed -i 's\user\'"$CheckUser"'\' /home/${CheckUser}/${EmsPath}/ems_install.silent
 
   # If change User name , /home/tibco/ -> /home/{Changed User Name}/ Need to Change.
   sed -i 's\"emsConfigDir"><\"emsConfigDir">/home/'"$CheckUser"'/tibco/ems/8.4<\' /home/${CheckUser}/${TraPath}/tra_install.silent
   sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${TraPath}/tra_install.silent
-  sed -i 's\user\tibco\' /home/${CheckUser}/${TraPath}/tra_install.silent
+  sed -i 's\user\'"$CheckUser"'\' /home/${CheckUser}/${TraPath}/tra_install.silent
 
   sed -i 's\opt/tibco\home/'"$CheckUser"'/tibco\' /home/${CheckUser}/${BwPath}/bw_install.silent
 

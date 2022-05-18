@@ -72,6 +72,27 @@ for i in range(11,20):
     f.write(data)
 f.close()
 
+# with문과 함꼐 사용하기
+f = open("foo.txt", 'w')
+f.write("life is too short, you need python")
+f.close()
+
+# 자동으로 열고 닫기
+with open("foo.txt",'w')as f:
+    f.write("life is too short, you need python")
+    
+# sys 모듈로 매개변수 주기
+# argv[0]은 파일이름이 되고 argv[1] 부터는 뒤에 따라오는 인수가 차례대로 argv 요소가 된다.
+# ex) python sys1.py aaa bbb ccc
+
+import sys
+
+args = sys.argv[1:]
+for i in args:
+    print(i)
+
+
+    
 
 
 

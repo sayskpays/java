@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0417bb9-fb02-45e6-ae01-bc1915507353" name="Changes" comment="" />
+    <list default="true" id="e0417bb9-fb02-45e6-ae01-bc1915507353" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Python/Python_dev/04-3_FileReadWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/Python_dev/04-3_FileReadWrite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/Python_dev/04-4_Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/Python_dev/04-4_Practice.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

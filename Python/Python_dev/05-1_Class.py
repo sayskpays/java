@@ -83,3 +83,39 @@ print(test01.div())
 
 # 클래스 변수
 
+class Family:
+    last_name = "kim"
+
+# 클래스의 변수는 두가지 방법으로 다 사용 가능하다.
+print(Family.last_name)
+
+a = Family()
+print(a.last_name)
+
+Family.last_name = "park"
+print(a.last_name)
+
+# 클래스 변수 값을 변경했더니 클래스로 만든 객체의 last_name 값도 모두 변경된다는 것을
+# 확인할 수 있다. 즉 클래스 변수는 클래스로 만든 모든 객체에 공유된다는 특징이 있다.
+
+# ! 하지만 클래스 변수를 바꾸기 위해서는 <클래스명>.<변수명> = <바꾸고자 하는 값>으로
+# 바꿔야 한다.
+
+
+"""
+위의 예제에서 a.last_name을 다음처럼 변경하면 어떻게 될까?
+a.last_name = "choi"
+
+이렇게 하면 Family 클래스의 last_name이 바뀌는 것이 아니라 a 객체에 last_name이라는 객체변수가
+새롭게 생성된다. 
+즉 ,객체 변수는 클래스 변수와 동일한 이름으로 생성할 수 있다.
+물론 a.last_name은 이제부터 Family 클래스의 last_name이 아닌 객체 a의 객체변수 last_name을 가리킨다.
+"""
+
+
+
+
+
+
+
+

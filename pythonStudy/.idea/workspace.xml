@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0417bb9-fb02-45e6-ae01-bc1915507353" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Python/Python_dev/04-3_FileReadWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/Python_dev/04-3_FileReadWrite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python/Python_dev/04-4_Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/Python_dev/04-4_Practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/Python_dev/05-1_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/Python_dev/05-1_Class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Python/Python_dev" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunManager" selected="Python.02-2.string">

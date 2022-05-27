@@ -84,6 +84,87 @@ __name__="__main__"이 참이 되어 if문 다음 문장이 수행된다.
 하지만 대화형 인터프리터나 다른 파일에서 이 모듈을 불러서 사용할 때는 거짓이 되어
 if문 다음 문장이 수행되지 않는다.
 
+import mod1
+mod1.__name__
+>> 'mod1' 
+
 """
+
+# 클래스나 변수 등을 포함한 모듈
+
+# mod2.py
+
+PI = 3.14
+
+class Math:
+    def solv(self,r):
+        return PI * (r ** 2)
+    
+def add(a,b):
+    return a+b
+
+# 모듈 안에 있는 클래스를 사용하려면 "."(도트 연산자)로 클래스 이름 앞에
+# 모듈 이름을 먼저 입력한다.
+
+# print(mod2.add(mod2.PI, 4.4))
+
+
+# 다른 파일에서 모듈 불러오기
+"""
+다른 파이썬 파일에서 이전에 만들어 놓은 모듈을 불러와서 사용하는 방법
+
+아래의 예제가 정상적으로 실행되기 위해서는 modtest.py , mod2.py 파일이 동일한
+디렉터리에 있어야 한다.
+"""
+
+# modtest.py
+
+import mod2
+
+result = mod2.add(3,4)
+print(result)
+
+# 모듈을 불러오는 또 다른 방법
+
+"""
+모듈을 저장한 디렉터리로 이동하지 않고 모듈을 불러와서 사용하는 방법
+
+1. sys.path.append 사용하기
+
+먼저 sys 모듈을 불러온다.
+
+import sys
+
+sys.path
+>> 파이썬 라이브러리가 설치되어 있는 디렉터리를 보여준다. 
+만약 파이썬 모듈이 위 디렉터리에 들어 있다면 모듈이 저장된 디렉터리로 이동할 필요 없이
+바로 불러서 사용할 수 있다.
+
+소스 코드 내에서 경로는 / or \\를 사용해야 한다.
+
+ex) sys.path.append("C:/dev/test")
+>> 이렇게 하면 sys.path에 추가 된다.
+
+
+* 이렇게 되면 모듈이 있는 디렉터리로 이동하지 않고 모듈을 사용할 수 있다.
+
+
+2. PYTHONPATH 환경 변수 사용하기
+
+C:\test> set PYTHONPATH=C:\doit\mymod
+C:\test> python
+>>> import mod2
+>>> print(mod2.add(3,4))
+
+
+"""
+
+
+
+
+
+
+
+
 
 

@@ -20,6 +20,7 @@ def searchFile(interface_id):
                 str_data = line
                 
                 error_time = datetime.strptime(str_data[:24].replace(" ",""),'%Y%b%d%H:%M:%S:%f')
+                
                 print(error_time)
                 print(type(error_time))
             
@@ -31,6 +32,13 @@ def searchFile(interface_id):
                     
 searchFile(str(input("insert data: ")))
                 
+"""
+from datetime import datetime, timedelta
 
+previous_date = datetime.now() - timedelta(days=1)
+current_date = datetime.now()
+print(present > past)
+
+"""
 
     

@@ -1,6 +1,6 @@
 # LOG CHECK
 
-from datetime import datetime
+from datetime import datetime , timedelta
 import fileinput
 import glob
 
@@ -20,10 +20,8 @@ def searchFile(interface_id):
                 str_data = line
                 
                 error_time = datetime.strptime(str_data[:24].replace(" ",""),'%Y%b%d%H:%M:%S:%f')
+                error_check_time = error_time+timedelta(minutes=3)
                 
-                print(error_time)
-                print(type(error_time))
-            
                 print("Error Occurrence Time : %s " %str_data[:24])
                 print("Error Data : %s " %line)
             else:

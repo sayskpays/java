@@ -16,13 +16,19 @@ def searchFile(interface_id):
            
             str_data = line.lower()
             interface_id = interface_id.lower()
-            list_all_data = list(str_data.split("\n"))
-            list_check_data = list()
+            list_all = list(str_data.split("\n"))
+            list_check = list()
+            list_check_date = list()
             
-            for x in list_all_data:
+            for x in list_all:
                 if interface_id in x:
-                    list_check_data.append(x)
-            print(list_check_data)
+                    list_check.append(x)
+                    
+                    for y in list_check:
+                        list_check_date.append(y[:24])
+            
+            print(list_check)        
+            print(list_check_date)
             
             # print("%s" %line[:24])
             # print("%s" %line)

@@ -39,8 +39,8 @@ def searchFile(interface_id):
                                 list_check_date_time = datetime.strptime(time,date_time_format) # date type
                                 
                                 while(flag):
-                                    error_time = list_check_date_time + timedelta(microseconds=1)
-                                    print(error_time)
+                                    list_check_date_time = list_check_date_time + timedelta(milliseconds=1)
+                                    print(list_check_date_time)
                                     
                                 #     while(flag):
                                 #         error_time = error_time + timedelta(milliseconds=1)

@@ -3,8 +3,6 @@
 from datetime import datetime , timedelta
 import fileinput
 import glob
-from tkinter.messagebox import NO
-
 
 def searchFile(interface_id):
     
@@ -31,6 +29,7 @@ def searchFile(interface_id):
                         list_check.append(x)
                         print(list_check) # 입력한 IF_ID 정보 값 출력
                         
+                         
                         for y in list_check:
                             
                             list_check_date.append(y[:24])
@@ -40,6 +39,7 @@ def searchFile(interface_id):
                                 
                                 while(flag):
                                     list_check_date_time = list_check_date_time + timedelta(milliseconds=1)
+
                                     print(list_check_date_time)
                                     
                                 #     while(flag):

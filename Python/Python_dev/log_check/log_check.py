@@ -4,33 +4,56 @@ from datetime import datetime , timedelta
 import fileinput
 import glob
 
-
-# Variable
-read_file_path = "C:/dev/hello.txt"
-
-
 def searchFile(interface_id):
     
-    if interface_id != None or '\s'  :
+    # Variable
+    read_file_path = "C:/dev/hello.txt"
+
+
+    
+    if interface_id != None or ""  :
         
         with fileinput.input(glob.glob(read_file_path)) as f:
             for line in f:
-            
                 str_data = line.lower()
                 interface_id = interface_id.lower()
                 list_all = list(str_data.split("\n"))
                 list_check = list()
                 list_check_date = list()
+                date_time_format = "%Y %b %d %H:%M:%S:%f"
+                flag = True
                 
                 for x in list_all:
                     if interface_id in x:
-                        list_check.append(x)
                         
+                        list_check.append(x)
+                        print(list_check) # 입력한 IF_ID 정보 값 출력
+                        
+                         
                         for y in list_check:
+                            
                             list_check_date.append(y[:24])
-                
-                print(list_check)        
-                print(list_check_date)
+                        
+                            for time in list_check_date:
+                                list_check_date_time = datetime.strptime(time,date_time_format) # date type
+                                
+                                while(flag):
+                                    list_check_date_time = list_check_date_time + timedelta(milliseconds=1)
+
+                                    print(list_check_date_time)
+                                    
+                                #     while(flag):
+                                #         error_time = error_time + timedelta(milliseconds=1)
+                                #         time_result = error_time.strftime('%Y %b %d %H:%M:%S:%f')
+                                #         # print(time_result)
+                                        
+                                #         if line.find(time_result) == -1:
+                                #             # print(time_result)
+                                #             flag = False
+                                #         else:
+                                #             pass
+                                
+                                
                 
                 # print("%s" %line[:24])
                 # print("%s" %line)
@@ -70,6 +93,7 @@ def searchFile(interface_id):
                 #     pass
     else:
         print("Please Input Data !")
+
             
 
 searchFile(input("insert data: "))

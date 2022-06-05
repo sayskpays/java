@@ -7,10 +7,8 @@ import glob
 def searchFile(interface_id):
     
     # Variable
-    read_file_path = "C:/dev/hello.txt"
-
-
-    
+    read_file_path = "C:/hello.txt"
+ 
     if interface_id != None or ""  :
         
         with fileinput.input(glob.glob(read_file_path)) as f:
@@ -37,10 +35,10 @@ def searchFile(interface_id):
                             for time in list_check_date:
                                 list_check_date_time = datetime.strptime(time,date_time_format) # date type
                                 
-                                while(flag):
-                                    list_check_date_time = list_check_date_time + timedelta(milliseconds=1)
+                                # while(flag):
+                                #     list_check_date_time = list_check_date_time + timedelta(milliseconds=1)
 
-                                    print(list_check_date_time)
+                                #     print(list_check_date_time)
                                     
                                 #     while(flag):
                                 #         error_time = error_time + timedelta(milliseconds=1)

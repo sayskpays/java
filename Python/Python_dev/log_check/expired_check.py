@@ -8,7 +8,7 @@ EMS_ERROR_MESSAGE = 'sche'
 
 def inputErrorTime(error_time):
     
-    flag = False
+    time_flag = False
     TIME_FORMAT = '%Y %b %d %H'
     error_time = datetime.strptime(error_time,TIME_FORMAT)
     
@@ -19,11 +19,11 @@ def inputErrorTime(error_time):
                    print('리스트로 시간 출력해서 input 값과 비교')
                    time_list = list(datetime.strftime(data[:18],TIME_FORMAT))
                    if data[:18].find(error_time) != 1 :
-                       flag = True
-                   
+                       time_flag = True
     except FileNotFoundError or FileExistsError:
         print('========= Log File Not Exsist ===========')    
         
+    return time_flag               
             
     
     # 입력 받은 시간 후에 EMS LOG에 Expired가 찍힌 시간대가 적힌 로그가 있는지 
@@ -31,7 +31,7 @@ def inputErrorTime(error_time):
 
 def searchFile():
     
-    flag = False
+    log_flag = False
     
     print("========== EMS Log ==============")
     
@@ -43,18 +43,18 @@ def searchFile():
                 for data in list_all:
                     print(data)
                     if data.find(EMS_ERROR_MESSAGE) != -1 :
-                        flag = True
+                        log_flag = True
                     else:
                         break
     except FileNotFoundError or FileExistsError:
         print('========= Log File Not Exsist ===========')    
         
-    return flag
+    return log_flag
 
 searchFile()
 
-def excute(flag):
-    if flag == True:
+def excute(log_flag):
+    if log_flag == True:
         try : 
             os.chdir('/home/tibco/tibco/tra/5.11/bin/')
             print('=============EAI Process Stop================')

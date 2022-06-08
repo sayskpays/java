@@ -1,10 +1,36 @@
+from datetime import datetime
 import os
 import subprocess
 
+
+EMS_LOG_PATH = "/home/tibco/test/hello.txt"
+EMS_ERROR_MESSAGE = 'sche'
+
+def inputErrorTime(error_time):
+    
+    flag = False
+    TIME_FORMAT = '%Y %b %d %H'
+    error_time = datetime.strptime(error_time,TIME_FORMAT)
+    
+    try:
+       with open(EMS_ERROR_MESSAGE,'r')as f:
+           for line in f:
+               for data in line:
+                   print('리스트로 시간 출력해서 input 값과 비교')
+                   time_list = list(datetime.strftime(data[:18],TIME_FORMAT))
+                   if data[:18].find(error_time) != 1 :
+                       flag = True
+                   
+    except FileNotFoundError or FileExistsError:
+        print('========= Log File Not Exsist ===========')    
+        
+            
+    
+    # 입력 받은 시간 후에 EMS LOG에 Expired가 찍힌 시간대가 적힌 로그가 있는지 
+    
+
 def searchFile():
-  
-    EMS_LOG_PATH = "/home/tibco/test/hello.txt"
-    EMS_ERROR_MESSAGE = 'sche'
+    
     flag = False
     
     print("========== EMS Log ==============")

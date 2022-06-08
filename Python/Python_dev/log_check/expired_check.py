@@ -7,6 +7,8 @@ def searchFile():
     EMS_ERROR_MESSAGE = 'sche'
     flag = False
     
+    print("========== EMS Log ==============")
+    
     try :
         with open(EMS_LOG_PATH,'r')as f:
             for line in f:

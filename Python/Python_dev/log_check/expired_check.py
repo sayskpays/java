@@ -24,24 +24,22 @@ searchFile()
 def excute(flag):
     if flag == True:
         os.chdir('/home/tibco/tibco/tra/5.11/bin/')
-        print('====================EAI Process Stop===================')
+        print('=============EAI Process Stop================')
         os.system('./AppManage -stop -app EAI_FBL -user a -pw a -domain eai_domain')
         
-        
-        print('=======================EMS KILL=======================')
-        values = os.system("kill $(ps -ef | grep 'tibemsd_8111' | grep -v 'color' | awk '{print $2}')")
+        print('==================EMS KILL==================')
+        os.system("kill $(ps -ef | grep 'tibemsd_8111' | grep -v 'color' | awk '{print $2}')")
         os.system("kill $(ps -ef | grep 'tibemsd.conf' | grep -v 'color' | awk '{print $2}')")
-        print('CHECK VALUE ================== : %s' %values)
         
-        print('====================EMS RESTART======================')
+        print('=================EMS RESTART===================')
         os.chdir('/home/tibco/tibco/ems/8.4/bin/')
         subprocess.call(['sh ./tibemsd_8111.sh &'],shell=True)
         
-        print('=====================EAI Process restart===================')
+        print('===============EAI Process restart================')
         os.chdir('/home/tibco/tibco/tra/5.11/bin/')
         os.system('./AppManage -start -app EAI_FBL -user a -pw a -domain eai_domain')
-        print("=====================RESTART COMPLETED========================")
+        print("================RESTART COMPLETED===================")
     else:
-        print('==============Does Not Exsist Expired Error Message==============')
+        print('============Does Not Exsist Expired Error Message==============')
 
 excute(searchFile())

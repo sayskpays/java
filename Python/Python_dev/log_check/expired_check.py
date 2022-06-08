@@ -2,18 +2,18 @@ import os
 import subprocess
 
 def searchFile():
-    # Local Variable
-    # /home/tibco/test/hello.txt
-    read_file_path = "/home/tibco/test/hello.txt"
+  
+    EMS_LOG_PATH = "/home/tibco/test/hello.txt"
+    EMS_ERROR_MESSAGE = 'sche'
     flag = False
     
-    with open(read_file_path,'r')as f:
+    with open(EMS_LOG_PATH,'r')as f:
         for line in f:
             list_all = list(line.lower().split("\n"))
             
             for data in list_all:
                 print(data)
-                if data.find('sche') != -1 :
+                if data.find(EMS_ERROR_MESSAGE) != -1 :
                     flag = True
                 else:
                     break
@@ -33,8 +33,8 @@ def excute(flag):
         os.system("kill $(ps -ef | grep 'tibemsd.conf' | grep -v 'color' | awk '{print $2}')")
         print('CHECK VALUE ================== : %s' %values)
         
-        os.chdir('/home/tibco/tibco/ems/8.4/bin/')
         print('====================EMS RESTART======================')
+        os.chdir('/home/tibco/tibco/ems/8.4/bin/')
         subprocess.call(['sh ./tibemsd_8111.sh &'],shell=True)
         
         print('=====================EAI Process restart===================')
@@ -42,6 +42,6 @@ def excute(flag):
         os.system('./AppManage -start -app EAI_FBL -user a -pw a -domain eai_domain')
         print("=====================RESTART COMPLETED========================")
     else:
-        print('Not Exsist Expired Error Message')
+        print('==============Does Not Exsist Expired Error Message==============')
 
 excute(searchFile())

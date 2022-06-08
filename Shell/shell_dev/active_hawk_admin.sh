@@ -2,6 +2,9 @@
 
 CheckUser=$(whoami)
 
+find ./ \( -name "*.tra" -o -name "*.conf" -o -name "*.cfg" -o -name "*.properties" -o -name "*.sh" -o -name "*.xml" \) -exec sed -i "s\/home/tibco/tibco/\/home/drepozen/tibco/\g" {} \;
+
+
 # If you change BW TRA Domain name , change this BwDomainName Variable
 # Ex) eai_domain -> {new domain name}
 BwDomainName='eai_domain'

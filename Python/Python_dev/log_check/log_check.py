@@ -3,6 +3,7 @@
 from datetime import datetime , timedelta
 import fileinput
 import glob
+import subprocess
 
 def searchFile(interface_id):
     
@@ -21,19 +22,25 @@ def searchFile(interface_id):
                 date_time_format = "%Y %b %d %H:%M:%S:%f"
                 flag = True
                 
+                
                 for x in list_all:
                     if interface_id in x:
                         
                         list_check.append(x)
-                        print(list_check) # 입력한 IF_ID 정보 값 출력
+                        # print(list_check) # 입력한 IF_ID 정보 값 출력
+                        
                         
                          
                         for y in list_check:
                             
                             list_check_date.append(y[:24])
+                              
+                            
                         
-                            for time in list_check_date:
-                                list_check_date_time = datetime.strptime(time,date_time_format) # date type
+                            # for time in list_check_date:
+                            #     list_check_date_time = datetime.strptime(time,date_time_format) # date type
+
+                           
                                 
                                 # while(flag):
                                 #     list_check_date_time = list_check_date_time + timedelta(milliseconds=1)

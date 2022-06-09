@@ -5,8 +5,13 @@
 4. 기출문제 풀기(프로그래머스:카카오)
 """
 
-def solution(new_id):
-    if len(new_id)>=3 and len(new_id)<=15:
-        
-        answer = ''
-    return answer
+n = 1
+def put_id():
+    x = 1
+    print(f'id(x) = {id(x)}')
+    
+print(f'id(1) = {id(1)}')
+print(f'id(n) = {id(n)}')
+
+put_id()
+

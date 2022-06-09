@@ -37,6 +37,7 @@ def excute(log_flag):
             print('=============EAI Process Stop================')
             os.system('./AppManage -stop -app EAI_FBL -user a -pw a -domain eai_domain')
             
+            
             print('==================EMS KILL==================')
             os.system("kill $(ps -ef | grep 'tibemsd_8111' | grep -v 'color' | awk '{print $2}')")
             os.system("kill $(ps -ef | grep 'tibemsd.conf' | grep -v 'color' | awk '{print $2}')")

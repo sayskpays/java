@@ -144,6 +144,7 @@ n = int(input('n값을 입력하세요: '))
 sum = 0
 # Count 변수 i는 1부터 시작하고 n + 1 이 될때까지 반복한다. 
 # range(count 시작값 , count 종료값)
+# count 시작값이 1 이기 때문에 종료값에 +1을 하는 것
 for i in range(1, n + 1):
     sum += i
 

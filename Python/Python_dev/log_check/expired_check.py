@@ -2,33 +2,9 @@ from datetime import datetime
 import os
 import subprocess
 
-
 EMS_LOG_PATH = "/home/tibco/test/hello.txt"
 EMS_ERROR_MESSAGE = 'sche'
-
-def inputErrorTime(error_time):
-    
-    time_flag = False
-    TIME_FORMAT = '%Y %b %d %H'
-    error_time = datetime.strptime(error_time,TIME_FORMAT)
-    
-    try:
-       with open(EMS_ERROR_MESSAGE,'r')as f:
-           for line in f:
-               for data in line:
-                   print('리스트로 시간 출력해서 input 값과 비교')
-                   time_list = list(datetime.strftime(data[:18],TIME_FORMAT))
-                   if data[:18].find(error_time) != 1 :
-                       time_flag = True
-    except FileNotFoundError or FileExistsError:
-        print('========= Log File Not Exsist ===========')    
-        
-    return time_flag               
-            
-    
-    # 입력 받은 시간 후에 EMS LOG에 Expired가 찍힌 시간대가 적힌 로그가 있는지 
-    
-
+ 
 def searchFile():
     
     log_flag = False
@@ -41,7 +17,8 @@ def searchFile():
                 list_all = list(line.lower().split("\n"))
                 
                 for data in list_all:
-                    print(data)
+                    if EMS_ERROR_MESSAGE in data:
+                        print(data)
                     if data.find(EMS_ERROR_MESSAGE) != -1 :
                         log_flag = True
                     else:
@@ -59,6 +36,7 @@ def excute(log_flag):
             os.chdir('/home/tibco/tibco/tra/5.11/bin/')
             print('=============EAI Process Stop================')
             os.system('./AppManage -stop -app EAI_FBL -user a -pw a -domain eai_domain')
+            
             
             print('==================EMS KILL==================')
             os.system("kill $(ps -ef | grep 'tibemsd_8111' | grep -v 'color' | awk '{print $2}')")

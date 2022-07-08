@@ -3,7 +3,7 @@ import os
 import subprocess
 
 EMS_LOG_PATH = "/home/tibco/test/hello.txt"
-EMS_ERROR_MESSAGE = 'sche'
+EMS_ERROR_MESSAGE = 'Expired'
  
 def searchFile():
     

@@ -30,7 +30,6 @@ print(result)
 print("\n".join(result))
 
 
-
 # 정규 표현식을 쓸 경우
 
 import re
@@ -91,11 +90,26 @@ ex) a,before,dude가 정규식 [abc]와 어떻게 매치되는지 살펴보자.
 정규 표현식의 Dot(.) 메타 문자는 줄바꿈 문자인 \n을 제외한 모든 문자와 매치됨을 의미한다.
 % re.DOTALL 옵션을 주면 \n 문자와도 매치된다.
 
-
-
 """
 
+# 정규 표현식 Method()
 
+"""
+Method	목적
+match()	문자열의 처음부터 정규식과 매치되는지 조사한다.
+search()	문자열 전체를 검색하여 정규식과 매치되는지 조사한다.
+findall()	정규식과 매치되는 모든 문자열(substring)을 리스트로 돌려준다.
+finditer()	정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 돌려준다.
+"""
+
+# 정규식을 이용한 문자열 검색
+
+import re
+
+p = re.compile('[a-z]+')
+
+m = p.match("python")
+print(m.group())
 
 
 

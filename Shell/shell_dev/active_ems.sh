@@ -4,8 +4,8 @@ CheckUser=$(whoami)
 
 # If you change BW TRA Domain name , change this BwDomainName Variable
 # Ex) eai_domain -> {new domain name}
-BwDomainName='eai_domain'
-EmsPort='8111'
+BwDomainName='eai_test_1'
+EmsPort='7444'
 
 if [ ${CheckUser} != "root" ]; then
   echo "${CheckUser}"

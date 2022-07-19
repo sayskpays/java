@@ -100,7 +100,3 @@ SELECT JOB_ID || '_EAI'|| JOB_TITLE  FROM HR.JOBS;
 
 
 
-
-
-
-

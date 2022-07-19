@@ -1,0 +1,2 @@
+2022 May 29 20:24:49:411 GMT -04:00 HawkAgent.master Info [Application] HWKMAG-020901 Adding MicroAgent: EAI_I_7019 COM.TIBCO.hawk.hma.FileStat:0
+2022 May 29 20:24:49:419 GMT -04:00 HawkAgent.master Info [Application] HWKMAG-020901 Adding MicroAgent: COM.TIBCO.hawk.hma.FileSystem:0

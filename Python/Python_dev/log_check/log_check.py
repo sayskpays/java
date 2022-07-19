@@ -8,7 +8,7 @@ import subprocess
 def searchFile(interface_id):
     
     # Variable
-    read_file_path = "C:/hello.txt"
+    read_file_path = "C:/dev/test/Python/Python_dev/log_check/hello.txt"
  
     if interface_id != None or ""  :
         

@@ -13,7 +13,7 @@ if [ ${CheckUser} == "hong" ]; then
         # Ems Kill
         kill $(ps -ef | grep 'tibemsd' | grep -v 'color' | awk '{print $2}')
         kill $(ps -ef | grep 'tibemsd.conf' | grep -v 'color' | awk '{print $2}')
-
+        
         # Ems Start
         cd ${ScriptPath}
         ./active_ems_7444.sh &

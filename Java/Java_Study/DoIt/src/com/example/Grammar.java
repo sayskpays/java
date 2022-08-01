@@ -236,8 +236,22 @@ public class Grammar {
         System.out.println(sum);
         */
 
-    
-        
+
+        /* Class */
+
+        // new로 클래스를 생성한다는 것은 Heap 메모리를 할당 받는 것
+        // static을 사용하여 인스턴스를 생성하지 않고 메소드, 변수를 설정하면 Heap에 메모리가 등록되지 않는다.
+
+        // Student studentName = new Student();
+        // studentName은 참조변수 이 변수는 생성된 인스턴스를 가리키게 된다.
+        // studentName은 지역변수, 스택 메모리에 생성된다. new Student()로 생성되는 인스턴스는 Heap 메로리에 생성된다.
+        // 즉 스택 메모리에 생성된 studentName이 Heap에 저장된 인스턴스의 주소를 저장하는 것이다.
+
+        // Heap 메모리
+        // dynamic memory(동적 메모리) 일반적으로 프로그램은 스택, 힙 , 데이터 이렇게 세 영역 사용
+        // 힙은 동적으로 할당 되며 , 사용이 끝나면 메모리를 해제 해줘야 한다. (gc 사용)
+
+
 
 
 

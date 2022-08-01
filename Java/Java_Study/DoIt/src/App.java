@@ -10,7 +10,6 @@ public class App {
         // a.showStudentInfo();
         a.divide(0,0);
 
-
         // InnerMethod.class
 
         InnerMethod test = new InnerMethod();

@@ -1,8 +1,6 @@
 package com.example;
 
-import java.util.Scanner;
-
-public class Test{
+public class Grammar {
     public static void main(String[] args) {
 
         // 삼항 연산자, 조건문, 반복문

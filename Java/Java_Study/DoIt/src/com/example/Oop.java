@@ -4,7 +4,7 @@ package com.example;
  * domain.student.view.StudentView
  * domain.server.hong.StudentView
  * 
- * 같은 이름의 클래스여도 다른 패키지에 속해 있으면 서로 연관이 없다.
+ * 같은 이름의 클래스여도 다른 패키지에 속해 있으면 서로 연관이 없다. (서로 다른 클래스)
  *
 
  2. void 메소드일때 해당 메소드를 종료하고 싶으면

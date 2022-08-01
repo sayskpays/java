@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.Scanner;
 
 public class Test{
@@ -236,7 +238,8 @@ public class Test{
         System.out.println(sum);
         */
 
-
+    
+        
 
 
 

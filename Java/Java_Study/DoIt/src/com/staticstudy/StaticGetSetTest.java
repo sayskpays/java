@@ -1,4 +1,4 @@
-package com.static_st;
+package com.staticstudy;
 
 public class StaticGetSetTest {
     public static void main(String[] args) {

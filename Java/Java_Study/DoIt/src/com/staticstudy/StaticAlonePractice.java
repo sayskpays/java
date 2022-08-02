@@ -1,4 +1,4 @@
-package com.static_st;
+package com.staticstudy;
 
 public class StaticAlonePractice {
 
@@ -9,6 +9,7 @@ public class StaticAlonePractice {
     // Constructor
     StaticAlonePractice(){
         studentNum++;
+
         this.studentCardNum = NUM + studentNum;
     }
 

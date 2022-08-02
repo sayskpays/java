@@ -1,3 +1,4 @@
+
 import com.example.InnerMethod;
 import com.example.Oop;
 
@@ -16,6 +17,8 @@ public class App {
         test.setStudentName("HongJunSoo");
 
         System.out.println(test.getStudentName());
+
+
 
     }
 

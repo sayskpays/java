@@ -4,11 +4,35 @@ public class Customer {
 
     // filed
 
-    private int customerID;
-    private String customerName;
-    private String customerGrade;
+    protected int customerID;
+    protected String customerName;
+    protected String customerGrade;
     int bonusPoint;
     double bonusRatio; // 적립 비율
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerGrade() {
+        return customerGrade;
+    }
+
+    public void setCustomerGrade(String customerGrade) {
+        this.customerGrade = customerGrade;
+    }
 
     // Constructor
     public Customer(){

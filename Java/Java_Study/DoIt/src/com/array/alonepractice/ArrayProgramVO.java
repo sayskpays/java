@@ -2,24 +2,24 @@ package com.array.alonepractice;
 
 public class ArrayProgramVO {
 
-    private int studentNum;
+    private int studentID;
     private String name;
     private String[] sub;
     private static int id = 1000;
 
     public ArrayProgramVO(String name, String[] sub) {
         id++;
-        this.studentNum = id;
+        this.studentID = id;
         this.name = name;
         this.sub = sub;
     }
 
-    public int getStudentNum() {
-        return studentNum;
+    public int getStudentID() {
+        return studentID;
     }
 
-    public void setStudentNum(int studentNum) {
-        this.studentNum = studentNum;
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
     }
 
     public String getName() {

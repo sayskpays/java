@@ -20,7 +20,7 @@ public class ArrayProgram {
 
         for(ArrayProgramVO show : test1){
             // 과목 성적을 출력하는 부분에서 막힘
-            System.out.println("학생"+show.getStudentNum() + show.getName()+ "의" + Arrays.toString(show.getSub())+"과목 성적은 각각"+ Arrays.toString(show.showScore(new ArrayProgramSubject[]{sub1, sub2})));
+            System.out.println("학생"+show.getStudentID() + show.getName()+ "의" + Arrays.toString(show.getSub())+"과목 성적은 각각"+ Arrays.toString(show.showScore(new ArrayProgramSubject[]{sub1, sub2})));
         }
     }
 

@@ -4,7 +4,7 @@ package com.access;
 // 접근 제어자 적용 : 내부 변수, 메서드, 생성자
 
 /*
-*   protected : 같은 패키지 내부, 상속 관계의 클래스만 접근 가능
+*   protected : 같은 패키지 내부 or  상속 관계의 클래스만 접근 가능
 *   default : 같은 패키지
 *   private : 같은 클래스
 */

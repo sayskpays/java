@@ -108,7 +108,7 @@ public class DownCastingTest {
                 System.out.println("다운캐스팅을 할 수 없습니다.");
             }
         }
-    }// testCasting
+    }// testCasting : 다운 캐스팅
 
 }// class
 
@@ -118,6 +118,8 @@ public class DownCastingTest {
 *
 *   test 참조 변수는 Animal의 멤버 변수, 메소드 밖에 사용하지 못한다.
 *   하지만 자식 클래스에서 오버라이딩한 메소드를 사용할 경우 자식것이 사용된다.
+*   Ex) test.move(); -> Human의 move() 실행
+*
 *
 *   즉 Animal의 멤버 변수와 메소드를 사용하고자 할 경우 다운 캐스팅 필요
 *

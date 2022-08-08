@@ -3,6 +3,7 @@ package com.design_pattern.template;
 public abstract class Car {
     public abstract void drive();
     public abstract void stop();
+    public abstract void wiper();
 
     public void startCar(){
         System.out.println("차가 움직입니다.");
@@ -16,6 +17,7 @@ public abstract class Car {
         drive();
         stop();
         turnOff();
+        wiper();
     }// 템플릿 메서드
 
 }

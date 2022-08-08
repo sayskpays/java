@@ -6,6 +6,8 @@ public class VIPCustomerExtendsChange extends Customer{
     private int agentID;
     double saleRatio;
 
+    String testInstance;
+
 //
 //    public VIPCustomerExtendsChange(){
 //

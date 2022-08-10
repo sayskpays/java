@@ -18,8 +18,6 @@ public class CustomerTest {
         Customer customerVIP = new VIPCustomerExtendsChange(1001,"김유신",1003);
 
 
-
-
         // -> 상위 클래스로 묵시적 클래스 형 변환
         // -> Customer 클래스의 멤버 변수와 메서드만 사용 가능
         // VIPCustomerExtendsChange 클래스의 showVIPInfo 메서드는 사용하지 못함.

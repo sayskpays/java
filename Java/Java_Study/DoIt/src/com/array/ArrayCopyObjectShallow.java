@@ -13,7 +13,8 @@ public class ArrayCopyObjectShallow {
         test1[2] = new ArrayObject("soo",5);
 
         // 인스턴스 째로 복사가 되기 때문에 new를 통해 새로운 인스턴스를 생성하지 않아도 된다.
-        //얕은 복사 , test1요소 값을 변경하면 test2도 변경 된다.
+        //얕은 복사 , test1요소 값을 변경하
+        // 면 test2도 변경 된다.
         System.arraycopy(test1,0,test2,0,3);
 
         for(ArrayObject a :test2){

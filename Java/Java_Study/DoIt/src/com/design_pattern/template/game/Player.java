@@ -22,5 +22,8 @@ public class Player {
 
     public void play(int count){
         level.go(count);
-    }
+    }// 다형성 활용
+    /*
+    *   하나의 코드가 다양한 자료형(Beginner, Advanced, Super)을 대상으로 동작
+    * */
 }

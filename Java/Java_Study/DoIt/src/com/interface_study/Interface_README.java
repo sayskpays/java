@@ -22,6 +22,8 @@ public class Interface_README {
     *  CompleteCalc
     *
     *
+    * 실무에서는 여러 클래스가 같은 메서드를 서로 다르게 구현한다.
+    *   이때 인터페이스에 메서드를 선언하고 각 클래스에서 Overriding 을 통해서 새로 구현체를 만들어줘 구현한다.
     *
     *
     *

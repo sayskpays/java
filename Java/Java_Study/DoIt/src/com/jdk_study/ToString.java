@@ -13,6 +13,12 @@ class Book{
         this.bookTitle = bookTitle;
     }
 
+    // toString() 메서드 Overriding
+    @Override
+    public String toString(){
+        return bookTitle + "," + bookNumber;
+    }
+
 }
 
 
@@ -26,9 +32,9 @@ public class ToString {
         System.out.println(str);
         Integer i = new Integer(100);
         System.out.println(i);
-        
-        String[] ab = {"a","b"};
-        System.out.println(Arrays.toString(ab));
+
+//        String[] ab = {"a","b"};
+//        System.out.println(Arrays.toString(ab));
 
 
 

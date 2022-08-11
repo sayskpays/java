@@ -9,6 +9,8 @@ public class Equals {
     * */
 
 
+
+
     public static void main(String[] args) {
         Book a = new Book(1,"a");
         Book b = a; // 주소 복사
@@ -40,6 +42,11 @@ public class Equals {
         }else{
             System.out.println("a와 c는 동일하지 않습니다");
         }
+
+        //객체는 equals여도 논리적 주소도 다르다고 나옴 하지만 String, Integer 타입은 같다고 나온다. =? equals 메서드가 재정의 되어 있기 때문
+
+
+
 
     }
 }

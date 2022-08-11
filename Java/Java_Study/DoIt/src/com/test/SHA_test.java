@@ -11,7 +11,6 @@ public class SHA_test {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(text.getBytes());
 
-
         return bytesToHex(md.digest());
     }
 
@@ -29,7 +28,6 @@ public class SHA_test {
         String password = "123123";
 
         hashPassword = sha_test.encrypt(password);
-
 
         return hashPassword;
     }

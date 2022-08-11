@@ -19,6 +19,20 @@ class Book{
         return bookTitle + "," + bookNumber;
     }
 
+    // equals Overriding
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Book){
+            Book book = (Book)obj;
+            if(this.bookNumber == book.bookNumber){
+                return true;
+            }
+            else return false;
+        }
+
+        return false;
+    }
+
 }
 
 

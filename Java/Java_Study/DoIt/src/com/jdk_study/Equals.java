@@ -8,9 +8,6 @@ public class Equals {
     *
     * */
 
-
-
-
     public static void main(String[] args) {
         Book a = new Book(1,"a");
         Book b = a; // 주소 복사

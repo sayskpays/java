@@ -33,12 +33,18 @@ class Book{
         return false;
     }
 
-}
+    @Override
+    public int hashCode(){
+        return bookNumber;
+    }
 
+
+}
 
 public class ToString {
     public static void main(String[] args) {
         Book book = new Book(200, "개미");
+        Book book2 = new Book(200, "개미");
 
         System.out.println(book.toString());
 
@@ -49,6 +55,18 @@ public class ToString {
 
 //        String[] ab = {"a","b"};
 //        System.out.println(Arrays.toString(ab));
+
+
+        System.out.println("////////////////////////////////////////////////////////////");
+
+        System.out.println(book.hashCode());
+        System.out.println(book2.hashCode());
+
+        // 재정의를한 (HashCode 힙 메모리 주소를 출력)
+        System.out.println(System.identityHashCode(book));
+        System.out.println(System.identityHashCode(book2));
+
+
 
 
 

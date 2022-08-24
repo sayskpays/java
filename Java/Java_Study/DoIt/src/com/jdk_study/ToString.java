@@ -13,6 +13,10 @@ class Book{
         this.bookTitle = bookTitle;
     }
 
+    public Book(){
+
+    }
+
     // toString() 메서드 Overriding
     @Override
     public String toString(){

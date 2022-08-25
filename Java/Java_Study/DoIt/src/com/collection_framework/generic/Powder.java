@@ -1,4 +1,4 @@
-package com.collection_framework;
+package com.collection_framework.generic;
 
 public class Powder extends Material{
 

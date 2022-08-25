@@ -1,4 +1,4 @@
-package com.collection_framework;
+package com.collection_framework.generic;
 
 /*
 *   변수나 메서드의 자료형을 필요에 따라 다른 자료형으로 바꿀 수 있다.

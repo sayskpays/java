@@ -68,6 +68,13 @@ print(split_a) # return list type
 "3+4 = " + str(3+4) # 이렇게 통일 시켜줘야 하는데 이것 보다는
 "3+4 = {}".format(3+4)  # 이렇게 코드를 쓰는다
 
+data = ['별', 2, 'M', 'Y']
+str_data = """이름 : {}
+나이: {}
+성별: {}
+지역: {}""".format(data)
+print(data)
+
 
 
 

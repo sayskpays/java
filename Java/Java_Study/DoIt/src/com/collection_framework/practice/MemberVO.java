@@ -24,9 +24,6 @@ public class MemberVO implements Comparable<MemberVO>{
         return false;
     }
 
-
-
-
     public MemberVO(int memberId, String memberName) {
         this.memberId = memberId;
         this.memberName = memberName;

@@ -25,7 +25,10 @@ public class MemberVO implements Comparable<MemberVO>{
     }
 
     public MemberVO(int memberId, String memberName) {
+        this.memberName = memberName;
         this.memberId = memberId;
+    }
+    public MemberVO(String memberName) {
         this.memberName = memberName;
     }
 
@@ -51,11 +54,23 @@ public class MemberVO implements Comparable<MemberVO>{
     }
 
 
+    // Comparable class 구현
     @Override
     public int compareTo(MemberVO vo) {
         return (this.memberId - vo.memberId); // 비교 대상 : this의 회원아이디, compareTo() 메서드로 전달된 회원 아이디
-        //
+
+        //비교하는 두 값 중 this값이 더 크면 양수를 반환 : 오름차순 정렬
+        // this값이 더 작으면 음수를 반환 : 내림차순 정렬
     }
+
+    // Comparator Class 구현
+    /* 우선적으로 재정의 하기 위해서는 Comparator<E> 를 implements 해줘야 한다.*/
+//    @Override
+//    public int compare(MemberVO mem1, MemberVO mem2){
+//        return mem1.getMemberId() - mem2.getMemberId();
+//    }
+
+
 
 
 }

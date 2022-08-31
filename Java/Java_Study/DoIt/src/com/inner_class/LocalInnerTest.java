@@ -5,6 +5,7 @@ class Outer{
     int outNum = 100;
     static int sNum = 200;
 
+
     // Method
     Runnable getRunnable(int i){
         int num = 100; // 지역 변수
@@ -19,6 +20,14 @@ class Outer{
         }
         return new MyRunnable();
     }
+
+
+
+
+
+
+
+
 }
 
 public class LocalInnerTest {
@@ -28,4 +37,6 @@ public class LocalInnerTest {
 
         runner.run();
     }
+
+
 }

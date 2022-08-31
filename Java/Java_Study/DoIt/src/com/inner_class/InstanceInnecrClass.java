@@ -15,12 +15,12 @@ class OutClass{
 
      class InClass{
         int inNum = 100;
-        static int sInNum = 200;
+        int sInNum = 200;
 
         void inTest(){
 
         }
-        static void sTest(){
+        void sTest(){
 
         }
 
@@ -35,7 +35,6 @@ public class InstanceInnecrClass {
     public static void main(String[] args) {
         OutClass outClass = new OutClass();
 
-        System.out.println(OutClass.InClass.sInNum);
         System.out.println(outClass);
     }
 

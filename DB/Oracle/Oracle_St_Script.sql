@@ -23,6 +23,27 @@ TRUNCATE TABLE DEPT_01;
 
 DROP TABLE DEPT_01;
 
+1. 테이블 컬럼 추가하기(ALTER TABLE ADD)
+[문법] ALTER TABLE 테이블명 ADD(컬럼명 데이타타입(사이즈));
+( EX ) USER라는 테이블에 USER_NAME이라는 컬럼을 VARCHAR2(13) 타입으로 추가할 때
+-> ALTER TABLE USER ADD(USER_NAME VARCHAR2(13)); 
+ 
+2. 테이블 컬럼 수정하기(ALTER TABLE MODIFY)
+[문법] ALTER TABLE 테이블명 MODIFY(컬럼명 테이타타입(사이즈));
+( EX ) USER라는 테이블에 USER_AGE 라는 컬럼을 NUMBER(3) 타입으로 수정할 때
+-> ALTER TABLE USER MODIFY(USER_AGE NUMBER(3));
+ 
+3. 테이블 컬럼 삭제하기(ALTER TABLE DROP)
+[문법] ALTER TABLE 테이블명 DROP COLUMN 컬럼명
+( EX ) USER라는 테이블에 USER_NAME 이라는 컬럼을 삭제할 때
+-> ALTER TABLE USER DROP COLUMN USER_NAME;
+ 
+4. 테이블 컬럼 이름 변경하기(ALTER TABLE RENAME)
+[문법] ALTER TABLE 테이블명 RENAME COLUMN 원래컬럼명 TO 바꿀컬럼명;
+( EX ) USER라는 테이블에 USER_NAME 이라는 컬럼을 USER_FIRST_NAME으로 변경할 때
+-> ALTER TABLE USER RENAME COLUMN USER_NAME TO USER_FIRST_NAME;
+
+
 -- TCL
 
 COMMIT;

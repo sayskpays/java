@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+=======
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+>>>>>>> efea4cea9238b71c44bc2c2b45d3053fe555f2ca
 
 public class App {
+
     public static void main(String[] args) throws Exception {
 
+<<<<<<< HEAD
 //        String rawString = "hi";
 //        byte[] bytes = rawString.getBytes("euc-kr");
 //
@@ -44,6 +51,8 @@ public class App {
 
 
 
+=======
+>>>>>>> efea4cea9238b71c44bc2c2b45d3053fe555f2ca
 
 
     }

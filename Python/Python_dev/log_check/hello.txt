@@ -5,7 +5,10 @@
 2022 May 29 20:25:08:082 GMT -04:00 HawkAgent.master Warn [Application] HWKRBE-041722 Error loading schedules from auto-config dir /home/tibco/tibco/tra/domain/eai_domain/autoconfig, COM.TIBCO.hawk.agent.source.SourceException: Invalid configuration object type java.io.FileNotFoundException: /home/tibco/tibco/tra/domain/eai_domain/autoconfig/schedules.hsf (No such file or directory)
 2022 May 29 20:25:08:083 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041735 Schedules not found
 2022 May 29 20:25:08:084 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041735 Schedules not found
+2022 May 29 20:25:08:084 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041735 Schedules not found
+2022 May 29 20:25:08:084 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041735 Schedules not found
 2022 May 29 20:25:08:085 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041742 No rulebases found in auto-config dir /home/tibco/tibco/tra/domain/eai_domain/autoconfig
 2022 May 29 20:30:41:816 GMT -04:00 HawkAgent.master Info [Application] HWKMAG-020901 Adding MicroAgent: COM.TIBCO.REPOSITORYSERVER:0
 2023 May 29 21:57:51:127 GMT -04:00 HawkAgent.master Info [Application] HWKAGT-010601 Agent gracefully shutting down - Hawk Agent Name:[mschester]  PID:[3211]
 2022 May 29 20:27:09:582 GMT -04:00 HawkAgent.master Warn [Application] HWKRBE-041722 Error loading schedules from auto-config dir /home/tibco/tibco/tra/domain/eai_domain/autoconfig, COM.TIBCO.hawk.agent.source.SourceException: Invalid configuration object type java.io.FileNotFoundException: /home/tibco/tibco/tra/domain/eai_domain/autoconfig/schedules.hsf (No such file or directory)
+2022 May 29 20:28:00:184 GMT -04:00 HawkAgent.master Info [Application] HWKRBE-041735 Expired Error Message 5

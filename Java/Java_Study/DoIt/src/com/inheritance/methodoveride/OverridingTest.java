@@ -26,7 +26,6 @@ public class OverridingTest {
         // 이렇게 될 경우 calPrice 메서드는 Overring된 생성된 인스턴스의 메서드를 호출
         // 즉, VIPCustomerExtendsChange의 calPrice 메서드 호출 => 가상 메서드
 
-        // 만약 같은
 
 
     }

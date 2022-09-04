@@ -16,6 +16,8 @@ public class IdFormatTest {
         this.userId = userId;
     }
 
+
+
     public static void main(String[] args) {
 
         IdFormatTest test = new IdFormatTest();

@@ -17,7 +17,6 @@ public class IdFormatTest {
     }
 
 
-
     public static void main(String[] args) {
 
         IdFormatTest test = new IdFormatTest();
@@ -27,6 +26,7 @@ public class IdFormatTest {
         String pass = new String("abc");
         System.out.println(pass.matches("[a-zA-Z]]+")); // 문자열로만 이루어졌는지 확인하는 메서드
         // true or false
+
 
         try{
             test.setUserId(userId);

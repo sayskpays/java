@@ -15,6 +15,7 @@ import java.io.*;
 
 class Person implements Serializable{
     private static final long serialVersionID = -154912431280L;
+
     String name;
     transient String job;
 

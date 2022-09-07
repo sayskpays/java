@@ -71,10 +71,12 @@ class SafeCalculator(Calculator):
             return self.first/self.second
 
 """
+
 SafeCalculator 클래스는 Calculator 클래스에 있는 div 메서드를 동일한 이름으로 다시 작성
 부모 클래스에(상속한 클래스) 있는 메서드를 동일한 이름으로 다시 만드는 것을
 메서드 오버라이딩(덮어쓰기) 라고 한다.
 이렇게 메서드를 오버라이딩 하면 부모클래스의 메서드 대신 오버라이딩한 메서드가 호출된다.
+
 """
 
 test01 = SafeCalculator(2,0)

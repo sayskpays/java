@@ -19,5 +19,5 @@ for i in range(6):
     right_list.append(right_data)
 
 
-print("{} {} {} {} {} {}".format(right_list))
+print(f'{right_list}')
 

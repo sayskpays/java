@@ -73,7 +73,7 @@ str_data = """이름 : {}
 나이: {}
 성별: {}
 지역: {}""".format(data)
-print(data)
+
 
 
 

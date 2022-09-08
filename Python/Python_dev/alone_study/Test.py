@@ -1,6 +1,8 @@
-data = ['별', 2, 'M', 'Y']
-str_data = """이름 : {}
-나이: {}
-성별: {}
-지역: {}""".format(data)
-print(data)
+
+dictionary = {
+
+    "name": "a",
+    "type": "b"
+}
+
+value = dictionary.get("존재하지 않는 키")

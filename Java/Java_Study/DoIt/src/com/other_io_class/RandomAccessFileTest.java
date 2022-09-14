@@ -20,8 +20,6 @@ public class RandomAccessFileTest {
         double d = rf.readDouble();
         String str = rf.readUTF();
 
-
-
         System.out.println("파일 포인터 위치:" + rf.getFilePointer());
         System.out.println(i);
         System.out.println(d);

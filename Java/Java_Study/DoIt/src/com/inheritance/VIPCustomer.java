@@ -6,7 +6,7 @@ public class VIPCustomer {
     private int customerID;
     private String customerName;
     private String customerGrade;
-    int bonusPoint;
+    public int bonusPoint;
     double bonusRatio;
 
     // VIP 고객 관련 기능을 구현할때만 필요한 멤버 변수

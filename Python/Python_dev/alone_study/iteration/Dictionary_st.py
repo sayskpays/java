@@ -8,3 +8,5 @@ dictionary = {
 
 for key in dictionary:
     print(dictionary[key])
+
+

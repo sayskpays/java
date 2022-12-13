@@ -61,6 +61,7 @@ class Item{
 }
 
 class ShoppingCart{
+
     List<Item> items;
 
     public ShoppingCart(){
@@ -86,7 +87,6 @@ class ShoppingCart{
         paymentMethod.pay(amount);
     }
 }
-
 
 public class StrategyPattern {
     public static void main(String[] args) {

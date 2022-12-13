@@ -40,7 +40,6 @@ class Topic implements Subject{
     public void notifyObservers() {
         this.observers.forEach(observers-> observers.update());
         this.observers.forEach(Observer::update);
-
     }
 
     @Override

@@ -1,6 +1,10 @@
 package ch06;
 
+
+
+
 public class ConstructorExample {
+
     // Field
     String model;
     String color;
@@ -43,5 +47,6 @@ public class ConstructorExample {
         this.color = color;
         this.maxSpeed = maxSpeed;
     }
+
 
     }

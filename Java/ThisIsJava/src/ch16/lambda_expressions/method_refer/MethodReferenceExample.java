@@ -7,6 +7,7 @@ public class MethodReferenceExample {
 
         // 정적 메소드일 경우
         // person.action(((x, y) -> Computer.staticMethod(x, y)));
+
         person.action(Computer::staticMethod);
 
         // 인스턴스 메소드일 경우

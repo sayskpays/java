@@ -24,6 +24,7 @@ public class EchoClient {
             // 데이터 받기
             DataInputStream dis = new DataInputStream(socket.getInputStream());
             String receiveMessage = dis.readUTF();
+            System.out.println("[클라이언트] 데이터 받음" + receiveMessage);
 
         } catch (IOException e) {
             e.printStackTrace();

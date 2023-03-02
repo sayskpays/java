@@ -32,6 +32,12 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public List<MemberDTO> findAll() {
+        // store.values() ==  Map 의 values값만 가져오기. 즉 MemberDTO 값만 저장.
         return new ArrayList<>(store.values());
+    }
+
+    // Test Case afterEach() 에서 쓰일 메서드
+    public void clearStore() {
+        store.clear();
     }
 }

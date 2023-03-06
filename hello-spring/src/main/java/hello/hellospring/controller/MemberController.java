@@ -1,8 +1,14 @@
 package hello.hellospring.controller;
 
+import hello.hellospring.domain.MemberDTO;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 /*
 * Controller에서 사용되는 MemberService 객체 인스턴스를 new로 생성하면
@@ -22,4 +28,29 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
+
+    @GetMapping("/members/new") // home.html에서 버튼을 누르면 mebmers/createMemberForm으로 보냄
+    public String createForm() {
+        return "members/createMemberForm";
+    }
+
+    @PostMapping("/members/new")
+    public String create(MemberForm form) {
+        MemberDTO member = new MemberDTO();
+        member.setName(form.getName());
+
+        System.out.println(form.getName());
+        memberService.join(member);
+
+        return "redirect:/";
+    }
+
+
+    @GetMapping("/members")
+    public String list(Model model) {
+        List<MemberDTO> members = memberService.findMembers();
+        model.addAttribute("members", members); // view로 값 전달
+        return "members/memberList"; // memberList로 사이트 이동
+    }
+
 }

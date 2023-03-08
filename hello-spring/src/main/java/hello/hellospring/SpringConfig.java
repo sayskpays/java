@@ -1,6 +1,7 @@
 package hello.hellospring;
 
 import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
@@ -28,7 +29,8 @@ public class SpringConfig {
     }
     @Bean
     public MemberRepository memberRepository() {
-        return new JdbcMemberRepository(dataSource);
+        // return new JdbcMemberRepository(dataSource);
        // return new MemoryMemberRepository(); // 인스턴스는 new로 생성 불가. 구현체를 return
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }

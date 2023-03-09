@@ -1,14 +1,10 @@
 package hello.hellospring.service;
 
-import hello.hellospring.domain.MemberDTO;
-import hello.hellospring.repository.MemberRepository;
+import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -51,14 +47,14 @@ class MemberServiceTest {
     @Test
     void 회원가입() {
         // given
-        MemberDTO member = new MemberDTO();
+        Member member = new Member();
         member.setName("hello");
 
         //when
         Long saveId = memberService.join(member);
 
         //then ( 검증 )
-        MemberDTO findMember = memberService.findOne(saveId).get();
+        Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
 
     }
@@ -69,10 +65,10 @@ class MemberServiceTest {
     @Test
     public void 중복_회원_예외() {
         // given
-        MemberDTO member1 = new MemberDTO();
+        Member member1 = new Member();
         member1.setName("spring");
 
-        MemberDTO member2 = new MemberDTO();
+        Member member2 = new Member();
         member2.setName("spring");
 
         //when

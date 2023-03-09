@@ -1,10 +1,7 @@
 package hello.hellospring.service;
 
-import hello.hellospring.domain.MemberDTO;
+import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,14 +24,14 @@ class MemberServiceIntegrationTest {
     @Test
     void 회원가입() {
         // given
-        MemberDTO member = new MemberDTO();
+        Member member = new Member();
         member.setName("hello");
 
         //when
         Long saveId = memberService.join(member);
 
         //then ( 검증 )
-        MemberDTO findMember = memberService.findOne(saveId).get();
+        Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
 
     }
@@ -42,10 +39,10 @@ class MemberServiceIntegrationTest {
     @Test
     public void 중복_회원_예외() {
         // given
-        MemberDTO member1 = new MemberDTO();
+        Member member1 = new Member();
         member1.setName("spring");
 
-        MemberDTO member2 = new MemberDTO();
+        Member member2 = new Member();
         member2.setName("spring");
 
         //when

@@ -1,7 +1,7 @@
 package hello.hellospring.repository;
 
 
-import hello.hellospring.domain.MemberDTO;
+import hello.hellospring.domain.Member;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
@@ -22,29 +22,29 @@ class MemoryMemberRepositoryTest {
 
     @Test
     public void save() {
-        MemberDTO member = new MemberDTO();
+        Member member = new Member();
         member.setName("hong");
 
         repository.save(member);
 
         // findById의 return값은 Optional , Optional의 값을 가져올때는 get을 붙인다.
         // 즉 Optional 껍질을 벗겨내는 용도 == get()
-        MemberDTO result = repository.findById(member.getId()).get();
+        Member result = repository.findById(member.getId()).get();
         // result와 member가 같은지 비교, sout으로 찍지 말고 Assertions 사용
         Assertions.assertThat(member).isEqualTo(result);
     }
 
     @Test
     public void findByName() {
-        MemberDTO member1 = new MemberDTO();
+        Member member1 = new Member();
         member1.setName("hong1");
         repository.save(member1);
 
-        MemberDTO member2 = new MemberDTO();
+        Member member2 = new Member();
         member2.setName("hong2");
         repository.save(member2);
 
-        MemberDTO result = repository.findByName("hong1").get();
+        Member result = repository.findByName("hong1").get();
 
         Assertions.assertThat(result).isEqualTo(member1);
 
@@ -52,15 +52,15 @@ class MemoryMemberRepositoryTest {
 
     @Test
     public void findAll() {
-        MemberDTO member1 = new MemberDTO();
+        Member member1 = new Member();
         member1.setName("hong1");
         repository.save(member1);
 
-        MemberDTO member2 = new MemberDTO();
+        Member member2 = new Member();
         member2.setName("hong2");
         repository.save(member2);
 
-        List<MemberDTO> result = repository.findAll();
+        List<Member> result = repository.findAll();
 
         Assertions.assertThat(result.size()).isEqualTo(2);
 

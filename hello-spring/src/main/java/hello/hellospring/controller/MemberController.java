@@ -1,6 +1,6 @@
 package hello.hellospring.controller;
 
-import hello.hellospring.domain.MemberDTO;
+import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,7 +36,7 @@ public class MemberController {
 
     @PostMapping("/members/new")
     public String create(MemberForm form) {
-        MemberDTO member = new MemberDTO();
+        Member member = new Member();
         member.setName(form.getName());
 
         System.out.println(form.getName());
@@ -48,7 +48,7 @@ public class MemberController {
 
     @GetMapping("/members")
     public String list(Model model) {
-        List<MemberDTO> members = memberService.findMembers();
+        List<Member> members = memberService.findMembers();
         model.addAttribute("members", members); // view로 값 전달
         return "members/memberList"; // memberList로 사이트 이동
     }

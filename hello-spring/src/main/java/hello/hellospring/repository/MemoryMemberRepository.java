@@ -1,39 +1,38 @@
 package hello.hellospring.repository;
 
-import hello.hellospring.domain.MemberDTO;
-import org.springframework.stereotype.Repository;
+import hello.hellospring.domain.Member;
 
 import java.util.*;
 
 
 public class MemoryMemberRepository implements MemberRepository{
 
-    private static Map<Long, MemberDTO> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
 
     @Override
-    public MemberDTO save(MemberDTO memberDTO) {
-        memberDTO.setId(++sequence);
-        store.put(memberDTO.getId(), memberDTO);
-        return memberDTO;
+    public Member save(Member member) {
+        member.setId(++sequence);
+        store.put(member.getId(), member);
+        return member;
     }
 
     @Override
-    public Optional<MemberDTO> findById(Long id) {
+    public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
     }
 
     // 루프문이 돌면서 store에 해당 name을 찾음 없으면 Optional null 반환
     @Override
-    public Optional<MemberDTO> findByName(String name) {
+    public Optional<Member> findByName(String name) {
         return store.values().stream()
                 .filter(memberDTO -> memberDTO.getName().equals(name))
                 .findAny();
     }
 
     @Override
-    public List<MemberDTO> findAll() {
+    public List<Member> findAll() {
         // store.values() ==  Map 의 values값만 가져오기. 즉 MemberDTO 값만 저장.
         return new ArrayList<>(store.values());
     }
